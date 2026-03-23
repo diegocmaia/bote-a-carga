@@ -7,7 +7,6 @@ import {
   lbToKg,
   KG_PLATES,
   LB_PLATES,
-  BAR_PRESETS,
   type Settings,
   type RoundingStep,
   type RoundingMode,
@@ -303,39 +302,6 @@ function SettingsPanel({
         <div className="settings-header">
           <h2>Configurações</h2>
           <button className="icon-btn" onClick={onClose}>✕</button>
-        </div>
-
-        <div className="settings-section">
-          <span className="settings-label">Peso da barra</span>
-          <div className="settings-options">
-            {BAR_PRESETS.map((p) => (
-              <button
-                key={p.label}
-                className={`option-btn ${Math.abs(settings.barWeight - p.kg) < 0.01 ? 'active' : ''}`}
-                onClick={() => onChange({ barWeight: p.kg })}
-              >
-                {p.label}
-              </button>
-            ))}
-          </div>
-          <div className="custom-bar-row">
-            <span className="custom-label">Personalizado (kg):</span>
-            <input
-              className="custom-pct-input"
-              type="number"
-              inputMode="decimal"
-              placeholder="ex: 10"
-              value={
-                BAR_PRESETS.some((p) => Math.abs(settings.barWeight - p.kg) < 0.01)
-                  ? ''
-                  : settings.barWeight.toString()
-              }
-              onChange={(e) => {
-                const v = parseFloat(e.target.value)
-                if (!isNaN(v) && v > 0) onChange({ barWeight: v })
-              }}
-            />
-          </div>
         </div>
 
         <div className="settings-section">
