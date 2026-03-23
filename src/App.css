@@ -60,6 +60,13 @@
   padding: 16px;
 }
 
+.section-label-group {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
 .section-label {
   display: block;
   font-size: 0.75rem;
@@ -68,6 +75,16 @@
   letter-spacing: 0.08em;
   color: var(--text-muted);
   margin-bottom: 12px;
+}
+
+.section-label-group .section-label {
+  margin-bottom: 0;
+}
+
+.section-sublabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 /* Weight input */

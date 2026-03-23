@@ -138,13 +138,16 @@ export default function App() {
       <main className="main">
         {/* Base Weight Input */}
         <section className="card">
-          <label className="section-label">Carga base</label>
+          <div className="section-label-group">
+            <label className="section-label">1RM</label>
+            <span className="section-sublabel">seu recorde máximo</span>
+          </div>
           <div className="weight-row">
             <input
               className="weight-input"
               type="number"
               inputMode="decimal"
-              placeholder="0"
+              placeholder="100"
               value={baseInput}
               onChange={(e) => setBaseInput(e.target.value)}
               autoFocus
