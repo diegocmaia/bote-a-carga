@@ -140,7 +140,7 @@ export default function App() {
         <section className="card">
           <div className="section-label-group">
             <label className="section-label">1RM</label>
-            <span className="section-sublabel">seu recorde máximo</span>
+            <span className="section-sublabel">peso máximo em 1 repetição</span>
           </div>
           <div className="weight-row">
             <input
